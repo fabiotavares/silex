@@ -8,7 +8,6 @@ Code Education
 Observações
 ----
 - O arquivo bootstrap.php contém comandos de inicialiação do Silex
-- Em src/FT estão as classes Cliente e Clientes, utilizadas no exemplo
 - Para testar o projeto, inicialmente execute o servidor PHP interno:
 -     php -S localhost:8888 -t public
 - Em seguida, abra em um navegador a seguinte rota:
