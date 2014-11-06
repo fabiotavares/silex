@@ -1,9 +1,9 @@
 Code Education
 ----
 - Módulo: Silex
-- Projeto Fase: I - Instalação e Configuração
+- Projeto Fase 2: Persistindo no Banco
 - Autor: Fábio Tavares
-- Data: 05/11/2014
+- Data: 06/11/2014
 
 Observações
 ----
@@ -11,5 +11,4 @@ Observações
 - Para testar o projeto, inicialmente execute o servidor PHP interno:
 -     php -S localhost:8888 -t public
 - Em seguida, abra em um navegador a seguinte rota:
--     http://localhost:8888/clientes
-- Como resultado, será exibida uma lista de objetos Cliente no formato JSON
+-     http://localhost:8888/produto
