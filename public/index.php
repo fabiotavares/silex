@@ -14,11 +14,12 @@ $app->get('/', function() {
 
 });
 
-$app->get('/clientes', function() {
+$app->get('/clientes', function() use ($app) {
 
     $clientes = new Clientes();
-    return $clientes->getClientesJson();
 
+    return $app->json($clientes->getClientes(), 200);
 });
 
 $app->run();
+
