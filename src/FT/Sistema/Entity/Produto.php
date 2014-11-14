@@ -13,8 +13,8 @@ class Produto
 {
     private $id;
     private $nome;
-    private $descricao;
     private $valor;
+    private $descricao;
 
     /**
      * @param mixed $descricao

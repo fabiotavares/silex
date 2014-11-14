@@ -1,0 +1,46 @@
+{% extends 'layout.twig' %}
+
+{% block opcoes %}
+    <ul class="nav" xmlns="http://www.w3.org/1999/html">
+        <li><a href="{{ path('create') }}" title="Cadastra um novo produto">Novo Produto</a></li>
+    </ul>
+{% endblock %}
+
+{% block conteudo %}
+        <table class="table table-bordered table-hover">
+
+            <thead>
+                <tr style="background: #F5F5F5">
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Valor</th>
+                    <th>Opções</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for produto in produtos %}
+                    <tr>
+                        <td>{{ produto.id }}</td>
+                        <td>{{ produto.nome }}</td>
+                        <td>{{ produto.descricao }}</td>
+                        <td>{{ produto.valor }}</td>
+                        <td>
+                            <form action='{{ path('editarProduto') }}' method='POST' name="feditar">
+                                <input type='hidden' name='produtoId' value='{{ produto.id }}'>
+                                <button type="submit" class="btn-link" title="Editar" name="editarProduto"><i class="icon-edit"></i></button>
+                            </form>
+
+                            <form action="{{ path('excluirProduto') }}" method="POST" onclick="confirmaExclusao({{ produto.id }})" name="fexcluir">
+                                <input type='hidden' name='produtoId' value='{{ produto.id }}'>
+                                <button type="submit" class="btn-link" title="Excluir" name="excluirProduto"><i class="icon-trash"></i></button>
+                            </form>
+                        </td>
+
+                    </tr>
+                {% endfor %}
+            </tbody>
+
+        </table>
+{% endblock %}

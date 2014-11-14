@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Cadastro de produtos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+</head>
+
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="http://github.com/fabiotavares/silex" target="_blank" title="Ir para github">Fábio Tavares</a>
+                <div class="nav-collapse collapse">
+                    {% block opcoes %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="hero-unit">
+            <h2>Code.education - Silex</h2>
+            <h2><small>Fase 3: CRUD com Twig</small></h2>
+        </div>
+
+        <div class="page-header">
+            {% block titulo %}<h4>Cadastro de Produtos</h4>{% endblock %}
+        </div>
+
+        {% block conteudo %}{% endblock %}
+    </div>
+
+
+<script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+</html>

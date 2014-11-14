@@ -1,14 +1,15 @@
 Code Education
 ----
 - Módulo: Silex
-- Projeto Fase 2: Persistindo no Banco
+- Projeto Fase 3: CRUD
 - Autor: Fábio Tavares
-- Data: 06/11/2014
+- Data: 14/11/2014
 
 Observações
 ----
-- O arquivo bootstrap.php contém comandos de inicialiação do Silex
-- Para testar o projeto, inicialmente execute o servidor PHP interno:
--     php -S localhost:8888 -t public
-- Em seguida, abra em um navegador a seguinte rota:
--     http://localhost:8888/produto
+- CRUD para uma tabela de produtos, utilizando-se PDO e Mysql
+- Execute o arquivo fixtures.php para gerar o banco de dados
+- Validação de dados utilizando-se HTML5
+- Testes realizados com o servidor interno do PHP:
+1) php -S localhost:8888 -t public
+2) http://localhost:8888/produtos

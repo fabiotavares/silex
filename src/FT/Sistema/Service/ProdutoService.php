@@ -22,9 +22,33 @@ class ProdutoService
         $this->produtoMapper = $produtoMapper;
     }
 
+    public function fetchAll()
+    {
+        return $this->produtoMapper->fetchAll();
+    }
+
+    public function fetch($id)
+    {
+        return $this->produtoMapper->fetch($id);
+    }
+
+    public function delete($id)
+    {
+        return $this->produtoMapper->delete($id);
+    }
+
+    public function update(array $data)
+    {
+        $this->produto->setNome($data['nome']);
+        $this->produto->setDescricao($data['descricao']);
+        $this->produto->setValor($data['valor']);
+        $this->produto->setId($data['produtoId']);
+
+        return $this->produtoMapper->update($this->produto);
+    }
+
     public function insert(array $data)
     {
-        $this->produto->setId($data['id']);
         $this->produto->setNome($data['nome']);
         $this->produto->setDescricao($data['descricao']);
         $this->produto->setValor($data['valor']);
@@ -33,4 +57,5 @@ class ProdutoService
 
         return $result;
     }
+
 } 
