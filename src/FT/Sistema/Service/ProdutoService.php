@@ -10,8 +10,10 @@ namespace FT\Sistema\Service;
 
 use FT\Sistema\Entity\Produto;
 use FT\Sistema\Mapper\ProdutoMapper;
+use FT\Sistema\Interfaces\iProdutoService;
+use Symfony\Component\HttpFoundation\Request;
 
-class ProdutoService
+class ProdutoService implements iProdutoService
 {
     private $produto;
     private $produtoMapper;
@@ -42,7 +44,7 @@ class ProdutoService
         $this->produto->setNome($data['nome']);
         $this->produto->setDescricao($data['descricao']);
         $this->produto->setValor($data['valor']);
-        $this->produto->setId($data['produtoId']);
+        $this->produto->setId($data['id']);
 
         return $this->produtoMapper->update($this->produto);
     }

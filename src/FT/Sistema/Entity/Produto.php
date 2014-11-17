@@ -8,8 +8,9 @@
 
 namespace FT\Sistema\Entity;
 
+use FT\Sistema\Interfaces\iProduto;
 
-class Produto
+class Produto implements iProduto
 {
     private $id;
     private $nome;

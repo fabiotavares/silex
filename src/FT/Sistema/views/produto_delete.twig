@@ -10,12 +10,12 @@
 
 {% block conteudo %}
 
-    <form class="form-horizontal" action="{{ path('excluirProduto') }}" method="POST">
-
+    <form class="form-horizontal" action="{{ path('produtoDelete') }}" method="POST">
+        <input type="hidden" name="_method" value="delete" />
         <div class="control-group">
             <label class='control-label' for='iId'>Id:</label>
             <div class="controls">
-                <input type="text" id="iId" name="id" class="span1 form-control" value="{{ produto.id }}" disabled />
+                <input type="text" class="span1 form-control" value="{{ produto.id }}" disabled />
             </div>
             <br />
             <label class='control-label' for='iNome'>Nome:</label>
@@ -34,8 +34,8 @@
             </div>
             <br /><br />
             <div class="controls">
-            <input type='hidden' name='produtoId' value="{{ produto.id }}">
-            <button type="submit" name="exclusaoConfirmada" class="btn btn-danger">Excluir</button>
+            <input type='hidden' name='id' value="{{ produto.id }}">
+            <button type="submit" name="salvar" class="btn btn-danger">Excluir</button>
             <a href="{{ path('produtos') }}" title="Cancela operação e retorna aos produtos"><button type="button" class="btn">Cancelar</button></a>
             </div>
 
