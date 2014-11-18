@@ -10,14 +10,25 @@ Observações
 - Projeto de estudos no curso Code.education
 - Execute o arquivo fixtures.php na raiz para importar o banco de dados
 - Testes realizados com o servidor interno do PHP:
-- Na raiz do projeto, digite digite: php -S 127.0.0.1:8080 -t public/ em um terminal
-- Testes de API utilizando a extensão POSTMAN do Chrome:
-- Para os testes no POSTMAN utilize as seguintes URLs:
+- Na raiz do projeto, digite digite: php -S localhost:8888 -t public/ em um terminal
+- Para os testes no POSTMAN via Chrome utilize os exemplos abaixo
+- Para listar todos os produtos no formato json usando o método GET:
 ```sh
-$ localhost:8888/api/produtos com GET (para listar os produtos no formato json)
-$ localhost:8888/api/produtos/1 com GET (para listar o produto de id=1)
-$ localhost:8888/api/produtos com POST (para inserir um produto com os campos digitados)
-$ localhost:8888/api/produtos/1 com PUT (para editar o produto de id=1 com os valores digitados)
-$ localhost:8888/api/produtos/1 com DELETE (para deletar o produto de id=1)
+$ localhost:8888/api/produtos
 ```
-
+- Para listar o produto cujo id foi passado via GET:
+```sh
+$ localhost:8888/api/produtos/{id}
+```
+- Para inserir um produto cujos campos foram passados via POST:
+```sh
+$ localhost:8888/api/produtos
+```
+- Para editar o produto cujo id e valores foram passados via PUT:
+```sh
+$ localhost:8888/api/produtos/{id}
+```
+- Para deletar o produto cujo id foi passado via DELETE:
+```sh
+$ localhost:8888/api/produtos/{id}
+```
