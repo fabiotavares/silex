@@ -12,5 +12,5 @@ use Silex\Application;
 
 interface iProdutoController
 {
-    function rotas(Application $app);
+    function getController(Application $app);
 } 

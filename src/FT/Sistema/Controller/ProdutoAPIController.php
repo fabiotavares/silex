@@ -17,7 +17,7 @@ use Silex\Application;
 
 class ProdutoAPIController implements iProdutoAPIController
 {
-    public function rotas(Application $app)
+    public function getController(Application $app)
     {
         $produtoControllerApi = $app['controllers_factory'];
 
